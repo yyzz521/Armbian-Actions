@@ -75,7 +75,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  RELEASE: "plucky noble trixie"
+  RELEASE: "noble"
   BOARD: "lemonpi som3588-cat ufi001c uz801"
 
 # ====================================================================
@@ -151,7 +151,7 @@ jobs:
       fail-fast: false
       matrix:
         BRANCH: [edge, vendor]
-        BOARD: ${{ fromJson(needs.Prepare_Build.outputs.BOARD) }}
+        BOARD: [orange-pi-5]
 
     steps:
       - name: "Checkout Board Source"
